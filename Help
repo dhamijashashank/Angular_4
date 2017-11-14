@@ -1,0 +1,27 @@
+Help Document 
+
+# Command to install angular cli
+  * npm install -g @angular/cli
+
+# Command for creating new project :
+  The Angular CLI makes it easy to create an application that already works, right out of the box.
+  It already follows our best practices!
+
+  * Command: ng new <Project-Name>
+  * Example: ng new newApplication
+
+# Command for genrating components , routes ,service and pipes with simple command
+  The CLI will also create simple test shells for all of these.
+
+  * Command for component: ng genrate components <component_name> OR ng g c <component_name>
+  * Example: ng g c loginComponent OR ng genrate component loginComponent
+  
+
+# Command to start server(Easily test your app locally while developing)
+  * ng serve
+
+Video 5: Angular 4 - Using Bootstrap
+ #Command to use BootStrap in project:
+  Before running following command you must be in project dir/folder, so that we inheriate bootstrap in our angular project
+   *npm install bootstrap --save
+
