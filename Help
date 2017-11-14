@@ -20,5 +20,8 @@ Help Document
 # Command to start server(Easily test your app locally while developing)
   * ng serve
 
-
+Video 5: Angular 4 - Using Bootstrap
+ #Command to use BootStrap in project:
+  Before running following command you must be in project dir/folder, so that we inheriate bootstrap in our angular project
+   *npm install bootstrap --save
 
