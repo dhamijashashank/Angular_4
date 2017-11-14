@@ -1,0 +1,47 @@
+Http+Service Snippets
+
+SimpleService
+
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+
+import { Observable } from 'rxjs';
+
+@Injectable()
+export class SimpleService{
+
+    constructor(private http:HttpClient){
+
+    }
+    public getQuestions():Observable<any>{
+        return this.http.get('/assets/questions.json');  
+    }
+
+}
+
+==============================================================
+
+Component 
+
+import { Component } from '@angular/core';
+import { SimpleService } from './simple.service';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'app';
+  constructor(private simpleService:SimpleService){
+
+  }
+
+  getQuestions(number){
+    this.simpleService.getQuestions().subscribe((res)=>{
+     
+      console.log(res[0]);
+      })
+ 
+  }
+}

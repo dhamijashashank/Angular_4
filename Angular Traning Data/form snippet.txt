@@ -1,0 +1,55 @@
+<!-- <form [formGroup]="formModel" (ngSubmit)="onSubmit()">
+    <p-panel header="Simple Form">
+        <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+                <div class="ui-grid-row">
+                        <div class="ui-grid-col-2">
+                            <label for="skuInput">Username:</label></div>
+                        <div class="ui-grid-col-6">
+                            <input type="text" id="skuInput" placeholder="SKU" formControlName="username"/>
+                        </div>
+                    </div>
+                    <div class="ui-grid-row">
+                        <div class="ui-grid-col-2">
+                            <label for="ippassword">Password:</label></div>
+                        <div class="ui-grid-col-6">
+                            <input type="password" id="ippassword" formControlName="passwd"/>
+                        </div>
+                    </div>
+           <div formGroupName="addressGroup">
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    <label for="skuInput">Address 1:</label></div>
+                <div class="ui-grid-col-6">
+                    <input type="text" id="ipaddress1" placeholder="address1" formControlName="address1"/>
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    <label for="skuInput">Address 2:</label></div>
+                <div class="ui-grid-col-6">
+                    <input type="text" id="ipaddress2" placeholder="address2" formControlName="address2"/>
+                </div>
+            </div>
+        </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2"></div>
+                <div class="ui-grid-col-2">
+                    <button pButton type="submit" label="Submit"></button>
+                </div>
+            </div>
+        </div>
+    </p-panel>
+</form> -->
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+constructor(fb:FormBuilder){
+    this.msgs = new Array<Object>();
+    this.formModel = fb.group({
+       username:[''],
+       passwd: [''],
+       addressGroup: fb.group({
+         address1: [''],
+         address2: ['']
+     })})
+    }

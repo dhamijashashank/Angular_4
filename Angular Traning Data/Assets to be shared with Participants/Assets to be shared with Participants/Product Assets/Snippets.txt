@@ -1,0 +1,96 @@
+Snippet 1
+===================================================
+To be added within the AppComponent class 
+===================================================
+products: Product[];
+  
+constructor() {
+    this.products = [
+      new Product(
+        'MYSHOES',
+        'Black Running Shoes',
+        '../assets/images/products/black-shoes.jpg',
+        ['Men', 'Shoes', 'Running Shoes'],
+        109.99),
+      new Product(
+        'NEATOJACKET',
+        'Blue Jacket',
+        '../assets/images/products/blue-jacket.jpg',
+        ['Women', 'Apparel', 'Jackets & Vests'],
+        238.99),
+      new Product(
+        'NICEHAT',
+        'A Nice Black Hat',
+        '../assets/images/products/black-hat.jpg',
+        ['Men', 'Accessories', 'Hats'],
+        29.99)
+    ];
+}
+    productWasSelected(product: Product): void {
+    	console.log('Product clicked: '+ product);
+  	}
+=================================================
+Snippet 2
+=================================================
+Product-list.css
+=================================================
+      .product{
+  display: block;
+  padding-bottom: 30px;
+  margin-top: 10px;
+}
+
+.product:hover{
+  border: 1px solid red;
+}
+======================================================
+Snippet 3
+======================================================
+Product-row.css
+======================================================
+.product-image-block{
+  width:20%;
+  display: inline-block;
+  position: relative;
+  top:30px;
+}
+
+.content{
+  width:40%;
+  display: inline-block;
+}
+
+.header{
+  font-weight: bold;
+}
+=======================================================
+product-row.html
+=======================================================
+ 
+ <product-image [product]="product" class="product-image-block"></product-image>
+  <div class="content">
+    <div class="header">{{ product.name }}</div>
+    <div >
+      <div >SKU #{{ product.sku }}</div>
+    </div>
+    <div>
+      <product-department [product]="product"></product-department>
+    </div>
+  </div>
+  <product-display [price]="product.price"></product-display>
+===========================================================
+Snippet 4
+===========================================================
+product-display.css
+===========================================================
+.price-display{
+  display: inline-block;
+}
+==========================================================
+product-image.css
+===========================================================
+.product-image{
+  width:100px;
+  height:100px;
+}
+===========================================================

@@ -1,0 +1,47 @@
+===================
+ProfileComponent
+===================
+
+import { Component, Input } from '@angular/core';
+
+import { AdComponent }      from './ad.component';
+
+@Component({
+  template: `
+    <div>
+      <h3>Profile Component</h3>
+      <h4>{{data.company}}</h4> 
+      {{data.yrs}}
+    </div>
+  `
+})
+export class ProfileComponent implements AdComponent {
+  @Input() data: any;
+
+}
+
+============================
+UserComponent
+============================
+import { Component, Input }  from '@angular/core';
+
+import { AdComponent }       from './ad.component';
+
+@Component({
+  template: `
+    <div>
+      <h3>User Component</h3>
+      <h4>{{data.name}}</h4>
+      
+      <p>{{data.bio}}</p>
+
+    </div>
+  `
+})
+export class UserComponent implements AdComponent {
+  @Input() data: any;
+}
+
+
+
+ 
