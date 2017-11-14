@@ -58,5 +58,27 @@ Video 5: Angular 4 - Using Bootstrap
      export class OtherModule {
      }
 
-    
 
+Video 6 to Video 9 ( Data binding )
+
+   1. Property binding [component => view]
+      There are 3 ways for property binding ,using double courly braces , using square bracket and using bind tag
+      * <img src="{{angularLogo}}">
+      * <img [src]="angularLogo">
+      * <img bind-src="angularLogo">
+    
+   2. Event Binding ( view ==> Component)
+      we can bind this on event only like below
+      (click)="MyMethod()"
+      (focus)="MyMethod()"
+      (blur)="MyMethod()"
+      (submit)="MyMethod()"
+      (copy)="MyMethod()"
+      (paste)="MyMethod()"
+      (scroll)="MyMethod()"
+      (keydown)="MyMethod()"
+      
+   3. Two way Binding 
+   
+      NgModel=
+      
