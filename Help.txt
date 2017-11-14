@@ -77,7 +77,8 @@ Video 6 to Video 9 ( Data binding )
       (paste)="MyMethod()"
       (scroll)="MyMethod()"
       (keydown)="MyMethod()"
-      
+      (keyup)="MyMethod()"
+
    3. Two way Binding 
    
       NgModel=
