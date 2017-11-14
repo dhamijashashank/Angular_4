@@ -22,6 +22,41 @@ Help Document
 
 Video 5: Angular 4 - Using Bootstrap
  #Command to use BootStrap in project:
-  Before running following command you must be in project dir/folder, so that we inheriate bootstrap in our angular project
+   Before running following command you must be in project dir/folder, so that we inheriate bootstrap in our angular project
    *npm install bootstrap --save
+   
+   * now open file .angular-cli.json and add following line in styles tag :
+     '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+   
+  # Alternative way to inteherite bootstrap : https://ng-bootstrap.github.io/#/getting-started
+    * npm install --save @ng-bootstrap/ng-bootstrap
+      Once installed you need to import our main module.
+
+     import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+     The only remaining part is to list the imported module in your root module and any additional
+     application modules that make use of the components in this library. The exact method will be slightly
+     different for the root (top-level) module for which you should end up with the code similar to 
+     (notice NgbModule.forRoot()):
+
+     import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+     @NgModule({
+       declarations: [AppComponent, ...],
+       imports: [NgbModule.forRoot(), ...],
+       bootstrap: [AppComponent]
+     })
+     export class AppModule {
+     }
+     Other modules in your application can simply import NgbModule:
+
+     import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+     @NgModule({
+       declarations: [OtherComponent, ...],
+       imports: [NgbModule, ...]
+     })
+     export class OtherModule {
+     }
+
+    
 
